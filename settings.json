@@ -1,0 +1,45 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-settings.json",
+  "permissions": {
+    "allow": [
+      "Bash(git status*)",
+      "Bash(git diff*)",
+      "Bash(git log*)",
+      "Bash(kubectl config current-context*)",
+      "Bash(kubectl config get-contexts*)",
+      "Bash(kubectl get *)",
+      "Bash(kubectl describe *)",
+      "Bash(kubectl logs *)",
+      "Bash(kubectl top *)",
+      "Bash(gcloud config list*)",
+      "Bash(gcloud logging read *)"
+    ],
+    "ask": [
+      "Bash(*auth*.ps1*)",
+      "Bash(gcloud container clusters get-credentials *)",
+      "Bash(kubectl exec *)",
+      "Bash(kubectl port-forward *)"
+    ],
+    "deny": [
+      "Read(./.env)",
+      "Read(./.env.*)",
+      "Read(./secrets/**)",
+      "Read(./**/secrets/**)",
+      "Read(./**/*key*.json)",
+      "Read(./**/*secret*)",
+      "Bash(kubectl delete *)",
+      "Bash(kubectl apply *)",
+      "Bash(kubectl replace *)",
+      "Bash(kubectl patch *)",
+      "Bash(kubectl scale *)",
+      "Bash(kubectl rollout restart *)",
+      "Bash(kubectl drain *)",
+      "Bash(kubectl cordon *)",
+      "Bash(kubectl uncordon *)",
+      "Bash(gcloud projects delete *)",
+      "Bash(gcloud iam *)",
+      "Bash(gcloud run services update *)",
+      "Bash(gcloud compute instances delete *)"
+    ]
+  }
+}
